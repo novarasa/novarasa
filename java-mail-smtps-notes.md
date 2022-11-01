@@ -26,19 +26,23 @@ https://github.com/mjremijan/thoth-email/blob/master/thoth-email-via-ssl/src/tes
 https://learn.microsoft.com/en-us/answers/questions/381623/javaxmailmessagingexception-could-not-convert-sock.html
 
 ```
-Properties props = new Properties();
- props.put("mail.smtp.socketFactory.fallback", "false");  
- props.put("mail.smtp.quitwait", "false");
- props.put("mail.smtp.socketFactory.port", "587");  
- props.put("mail.host", smtp.office365.com);
-    
- props.setProperty("mail.transport.protocol", "smtp");
-    
- props.setProperty("mail.smtp.port", "587");
- props.setProperty("mail.smtp.ssl.trust", "*");
- props.setProperty("mail.smtp.starttls.enable", String.valueOf(requireTls));//True or False
- props.setProperty("mail.smtp.ssl.protocols", "TLSv1.2");
- props.setProperty("mail.smtp.timeout", "300000");
- props.setProperty("mail.smtp.connectiontimeout", "300000");
- props.setProperty("mail.smtp.writetimeout", "300000");
+      Properties props = new Properties();
+      props.put("mail.smtp.socketFactory.fallback", "false");  
+      props.put("mail.smtp.quitwait", "false");
+      props.put("mail.smtp.socketFactory.port", "587");  
+      props.put("mail.host", smtp.office365.com);
+
+      props.setProperty("mail.transport.protocol", "smtp");
+
+      props.setProperty("mail.smtp.port", "587");
+      props.setProperty("mail.smtp.ssl.trust", "*");
+      props.setProperty("mail.smtp.starttls.enable", String.valueOf(requireTls));//True or False
+      props.setProperty("mail.smtp.ssl.protocols", "TLSv1.2");
+      props.setProperty("mail.smtp.timeout", "300000");
+      props.setProperty("mail.smtp.connectiontimeout", "300000");
+      props.setProperty("mail.smtp.writetimeout", "300000");
 ```
+
+Command Line test utilities
+
+https://halon.io/blog/how-to-test-smtp-servers-using-the-command-line
